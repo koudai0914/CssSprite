@@ -1,0 +1,102 @@
+@import "compass/reset";
+
+/**
+ * 変数定義
+ */
+$sprite_icon_width : 63px;
+$sprite_icon_height : 65px;
+$sprite_icon_spacing : 0.3px;
+$sprite_icon_horizontal_default : 1;
+$sprite_icon_horizontal_hover : 2;
+
+/**
+ * function定義
+ */
+@function getBackgroundPosition($size, $spacing, $position) {
+  $img_size : $size * $position - $size; //HACK: $position - 1は、scssの仕様上出来ない為、sizeを引いている
+  $img_spacing : $spacing * $position - $spacing; //HACK: $position - 1は、scssの仕様上出来ない為、spacingを引いている
+  @if $img_spacing > 0 {
+//    $img_spacing : $img_spacing - $spacing;
+  }
+  @return ($img_size + $img_spacing) * -1;
+}
+
+/**
+ * Mixin定義
+ */
+@mixin spriteBackgroundPosition($img_width, $img_height, $spacing, $vertical:1, $horizontal:1) {
+  background-position: getBackgroundPosition($img_width, $spacing, $vertical) getBackgroundPosition($img_height, $spacing, $horizontal);
+}
+
+@mixin spriteIconBackgroundPosition($vertical: 1, $horizontal: 1) {
+  @include spriteBackgroundPosition($sprite_icon_width, $sprite_icon_height, $sprite_icon_spacing, $vertical, $horizontal);
+}
+
+/**
+ * スタイル定義
+ */
+nav ul li {
+  font-size: 15px;
+  line-height: 1.2;
+//  width: 300px;
+  display: inline-block;
+}
+
+nav ul li i {
+  display: inline-block;
+  width: $sprite_icon_width;
+  height: $sprite_icon_height;
+  margin: -6px 3px 0 0;
+  background: url(../img/sprite.png) 0 0 no-repeat;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+nav ul li:after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin: 2px 0 0 -6px;
+  border: 6px transparent solid;
+}
+
+#boy i {
+//  background-position: 0 0;
+  @include spriteIconBackgroundPosition(1, $sprite_icon_horizontal_default);
+
+  &:hover {
+    @include spriteIconBackgroundPosition(1, $sprite_icon_horizontal_hover);
+  }
+}
+#girl i {
+//  background-position: $sprite_icon_width * -1 0;
+  @include spriteIconBackgroundPosition(2, $sprite_icon_horizontal_default);
+  &:hover {
+    @include spriteIconBackgroundPosition(2, $sprite_icon_horizontal_hover);
+  }
+}
+#pickup i {
+//  background-position: $sprite_icon_width * -2 0;
+  @include spriteIconBackgroundPosition(3, $sprite_icon_horizontal_default);
+  &:hover {
+    @include spriteIconBackgroundPosition(3, $sprite_icon_horizontal_hover);
+  }
+}
+#shop i {
+//  background-position: $sprite_icon_width * -3 0;
+  @include spriteIconBackgroundPosition(4, $sprite_icon_horizontal_default);
+  &:hover {
+    @include spriteIconBackgroundPosition(4, $sprite_icon_horizontal_hover);
+  }
+}
+#login i {
+//  background-position: $sprite_icon_width * -4 0;
+  @include spriteIconBackgroundPosition(7, $sprite_icon_horizontal_default);
+  &:hover {
+    @include spriteIconBackgroundPosition(7, $sprite_icon_horizontal_hover);
+  }
+}

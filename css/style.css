@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/**
+ * 変数定義
+ */
+/**
+ * function定義
+ */
+/**
+ * Mixin定義
+ */
+/**
+ * スタイル定義
+ */
+/* line 38, ../sass/style.scss */
+nav ul li {
+  font-size: 15px;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+/* line 45, ../sass/style.scss */
+nav ul li i {
+  display: inline-block;
+  width: 63px;
+  height: 65px;
+  margin: -6px 3px 0 0;
+  background: url(../img/sprite.png) 0 0 no-repeat;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/* line 56, ../sass/style.scss */
+nav ul li:after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin: 2px 0 0 -6px;
+  border: 6px transparent solid;
+}
+
+/* line 67, ../sass/style.scss */
+#boy i {
+  background-position: 0px 0px;
+}
+/* line 71, ../sass/style.scss */
+#boy i:hover {
+  background-position: 0px -65.3px;
+}
+
+/* line 75, ../sass/style.scss */
+#girl i {
+  background-position: -63.3px 0px;
+}
+/* line 78, ../sass/style.scss */
+#girl i:hover {
+  background-position: -63.3px -65.3px;
+}
+
+/* line 82, ../sass/style.scss */
+#pickup i {
+  background-position: -126.6px 0px;
+}
+/* line 85, ../sass/style.scss */
+#pickup i:hover {
+  background-position: -126.6px -65.3px;
+}
+
+/* line 89, ../sass/style.scss */
+#shop i {
+  background-position: -189.9px 0px;
+}
+/* line 92, ../sass/style.scss */
+#shop i:hover {
+  background-position: -189.9px -65.3px;
+}
+
+/* line 96, ../sass/style.scss */
+#login i {
+  background-position: -379.8px 0px;
+}
+/* line 99, ../sass/style.scss */
+#login i:hover {
+  background-position: -379.8px -65.3px;
+}
